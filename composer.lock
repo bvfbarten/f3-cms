@@ -4,8 +4,39 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "611772882f2e1765250718cb83cdf086",
+    "content-hash": "08b70c272c148e2b67921a8643832b43",
     "packages": [
+        {
+            "name": "bcosca/fatfree",
+            "version": "3.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bcosca/fatfree.git",
+                "reference": "62f40d88994b99a51cfba5556931e80e1bb64a8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/62f40d88994b99a51cfba5556931e80e1bb64a8c",
+                "reference": "62f40d88994b99a51cfba5556931e80e1bb64a8c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/base.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
+            "homepage": "http://fatfreeframework.com/",
+            "time": "2020-12-13T12:52:53+00:00"
+        },
         {
             "name": "bcosca/fatfree-core",
             "version": "3.7.2",
@@ -35,11 +66,40 @@
             ],
             "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
             "homepage": "http://fatfreeframework.com/",
-            "support": {
-                "issues": "https://github.com/bcosca/fatfree-core/issues",
-                "source": "https://github.com/bcosca/fatfree-core/tree/3.7.2"
-            },
             "time": "2020-05-28T16:14:27+00:00"
+        },
+        {
+            "name": "bvfbarten/f3-model",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bvfbarten/f3-model.git",
+                "reference": "237e3e2e4e078aa7909c47e780e32c6a79fdc93e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bvfbarten/f3-model/zipball/237e3e2e4e078aa7909c47e780e32c6a79fdc93e",
+                "reference": "237e3e2e4e078aa7909c47e780e32c6a79fdc93e",
+                "shasum": ""
+            },
+            "require": {
+                "bcosca/fatfree": "^3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "F3Model\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Brady Barten",
+                    "email": "bvfbarten@gmail.com"
+                }
+            ],
+            "description": "Simple model class for f3 framework",
+            "time": "2021-04-13T08:08:22+00:00"
         }
     ],
     "packages-dev": [],
@@ -50,5 +110,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "1.1.0"
 }

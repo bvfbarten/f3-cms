@@ -1,5 +1,6 @@
 {
     "require": {
-        "bcosca/fatfree-core": "^3.7"
+        "bcosca/fatfree": "^3.7",
+        "bvfbarten/f3-model": "^0.1.0"
     }
 }
