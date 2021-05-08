@@ -1,5 +1,9 @@
 <?php
 
+namespace Controllers;
+
+use DB\SQL\Mapper;
+
 //! Admin back-end processor
 class Admin extends Controller {
 
@@ -41,7 +45,7 @@ class Admin extends Controller {
 		// Determine direction of re-sequencing (-1:up, +1:down)
 		$vector=$f3->sign($f3->get('GET.vector'));
 		// Get reference page
-		$page=new DB\SQL\Mapper($db,'pages');
+		$page=new Mapper($db,'pages');
 		$slug=($f3->get('GET.slug')?:'');
 		$page->load(array('slug=?',$slug));
 		if (!$page->dry()) {
@@ -77,7 +81,7 @@ class Admin extends Controller {
 		);
 		if ($f3->exists('GET.slug')) {
 			// Find matching page
-			$page=new DB\SQL\Mapper($this->db,'pages');
+			$page=new Mapper($this->db,'pages');
 			$page->load(array('slug=?',$f3->get('GET.slug')));
 			if ($page->dry())
 				// No match; new page
@@ -96,7 +100,7 @@ class Admin extends Controller {
 	//! Process editor form
 	function exec($f3) {
 		$db=$this->db;
-		$page=new DB\SQL\Mapper($db,'pages');
+		$page=new Mapper($db,'pages');
 		// Validate submitted form
 		if (!$f3->exists('POST.title') || !strlen($f3->get('POST.title')))
 			$f3->set('message','Title is required');
@@ -127,7 +131,7 @@ class Admin extends Controller {
 						)
 					);
 					// Erase all comments related to the page
-					$comment=new DB\SQL\Mapper($db,'comments');
+					$comment=new Mapper($db,'comments');
 					$comment->erase(array('slug=?',$slug));
 				}
 			}

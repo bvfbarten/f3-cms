@@ -1,12 +1,19 @@
 <?php
+namespace Controllers;
+
+use Log;
+use Image;
+use DB\SQL\Mapper;
+
 
 //! Front-end processor
+
 class CMS extends Controller {
 
 	//! Display content page
 	function show($f3,$args) {
 		$db=$this->db;
-		$page=new DB\SQL\Mapper($db,'pages');
+		$page=new Mapper($db,'pages');
 		$slug=empty($args['slug'])?'':$args['slug'];
 		$page->load(array('slug=?',$slug));
 		$f3->set('menu',
@@ -43,7 +50,7 @@ class CMS extends Controller {
 			$f3->set('message','Comment cannot be blank');
 		else {
 			$db=$this->db;
-			$comment=new DB\SQL\Mapper($db,'comments');
+			$comment=new Mapper($db,'comments');
 			$comment->copyfrom('POST');
 			$img=new Image;
 			$comment->set('identicon',
@@ -62,6 +69,9 @@ class CMS extends Controller {
 	function error($f3) {
 		$log=new Log('error.log');
 		$log->write($f3->get('ERROR.text'));
+        if (is_string($f3->get('ERROR.trace'))){
+            $f3->set('ERROR.trace', explode("\n", $f3->get('ERROR.trace')));
+        }
 		foreach ($f3->get('ERROR.trace') as $frame)
 			if (isset($frame['file'])) {
 				// Parse each backtrace stack frame
@@ -81,6 +91,7 @@ class CMS extends Controller {
 				// Write to custom log
 				$log->write($addr.' '.$line);
 			}
+        //varDie($f3->get('ERROR'));
 		$f3->set('inc','error.htm');
 	}
 

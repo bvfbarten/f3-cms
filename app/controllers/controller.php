@@ -1,8 +1,14 @@
 <?php
 
+namespace Controllers;
+
+use Base;
+use Template;
+use DB\SQL;
+use DB\SQL\Session;
+
 //! Base controller
 class Controller {
-
 	protected
 		$db;
 
@@ -24,7 +30,7 @@ class Controller {
 	function __construct() {
 		$f3=Base::instance();
 		// Connect to the database
-		$db=new DB\SQL($f3->get('db'));
+		$db=new SQL($f3->get('db'));
 		if (file_exists('../db/setup.sql')) {
 			// Initialize database with default setup
 			$db->exec(explode(';',$f3->read('../db/setup.sql')));
@@ -32,7 +38,7 @@ class Controller {
 			rename('../db/setup.sql','../db/setup.$ql');
 		}
 		// Use database-managed sessions
-		new DB\SQL\Session($db);
+		new Session($db);
 		// Save frequently used variables
 		$this->db=$db;
 	}

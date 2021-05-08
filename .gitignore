@@ -2,3 +2,5 @@ vendor/
 tmp/
 db/cms.db
 db/setup.$ql
+storage
+public/assets

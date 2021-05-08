@@ -1,5 +1,10 @@
 <?php
 
+function varDie($args) {
+    echo '<pre>';
+    var_dump($args);
+    die();
+}
 // Retrieve instance of the framework
 require(__DIR__.'/../vendor/autoload.php');
 $f3 = Base::instance();
