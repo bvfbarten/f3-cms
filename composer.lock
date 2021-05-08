@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "08b70c272c148e2b67921a8643832b43",
+    "content-hash": "8fe2a7a9c1edfd0ab4618abd56fd1c90",
     "packages": [
         {
             "name": "bcosca/fatfree",
@@ -38,48 +38,17 @@
             "time": "2020-12-13T12:52:53+00:00"
         },
         {
-            "name": "bcosca/fatfree-core",
-            "version": "3.7.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bcosca/fatfree-core.git",
-                "reference": "a0f7ecf456a2f1e099a9b6d7aedc22970be56030"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bcosca/fatfree-core/zipball/a0f7ecf456a2f1e099a9b6d7aedc22970be56030",
-                "reference": "a0f7ecf456a2f1e099a9b6d7aedc22970be56030",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "."
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0"
-            ],
-            "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
-            "homepage": "http://fatfreeframework.com/",
-            "time": "2020-05-28T16:14:27+00:00"
-        },
-        {
             "name": "bvfbarten/f3-model",
-            "version": "0.1",
+            "version": "0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bvfbarten/f3-model.git",
-                "reference": "237e3e2e4e078aa7909c47e780e32c6a79fdc93e"
+                "reference": "9e387491b94b491ec0d67b148e9f36f69703109d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bvfbarten/f3-model/zipball/237e3e2e4e078aa7909c47e780e32c6a79fdc93e",
-                "reference": "237e3e2e4e078aa7909c47e780e32c6a79fdc93e",
+                "url": "https://api.github.com/repos/bvfbarten/f3-model/zipball/9e387491b94b491ec0d67b148e9f36f69703109d",
+                "reference": "9e387491b94b491ec0d67b148e9f36f69703109d",
                 "shasum": ""
             },
             "require": {
@@ -99,7 +68,7 @@
                 }
             ],
             "description": "Simple model class for f3 framework",
-            "time": "2021-04-13T08:08:22+00:00"
+            "time": "2021-05-01T07:50:34+00:00"
         }
     ],
     "packages-dev": [],
