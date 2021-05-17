@@ -6,6 +6,9 @@ function varDie($args) {
     die();
 }
 function render($view, $args = [], $type = "text/html") {
+    if (!isset($args['f3'])) {
+        $args['f3'] = \Base::instance();
+    }
     return (\View::instance())
         ->render($view, $type, $args);
 }
