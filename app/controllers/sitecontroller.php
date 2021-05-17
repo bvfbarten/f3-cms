@@ -14,18 +14,9 @@ class SiteController extends Controller  {
         }
         $slug = "{$slug}.php";
         if (is_file($f3->get('UI')."{$slug}")) {
-            echo render("{$slug}", compact('f3', 'slug'));
+            $f3->set('PAGE',  render("{$slug}", compact('f3', 'slug')));
         } else {
 			$f3->error(404);
-        }
-    }
-    function afterroute($f3) {
-        if ($t = $f3->get('TEMPLATE')) {
-            echo render($t);
-        } else {
-            if ($f3->get('PAGE')) {
-                echo render($f3->get('PAGE'));
-            }
         }
     }
 	function error($f3) {

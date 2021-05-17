@@ -12,7 +12,6 @@ function render($view, $args = [], $type = "text/html") {
 // Retrieve instance of the framework
 require(__DIR__.'/../vendor/autoload.php');
 $f3 = Base::instance();
-$f3->set('_DEBUG.time', hrtime(true));
 
 // Initialize CMS
 $f3->config(__DIR__.'/../app/config.ini');
