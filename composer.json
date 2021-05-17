@@ -1,6 +1,7 @@
 {
     "require": {
         "bcosca/fatfree": "^3.7",
-        "bvfbarten/f3-model": "^0.2.0"
+        "bvfbarten/f3-model": "^0.2.0",
+        "myaghobi/f3-benchmark": "^1.3"
     }
 }
